@@ -1,4 +1,3 @@
-import java.util.Random;
 import java.util.stream.IntStream;
 
 public class EvenIndex {
@@ -36,8 +35,9 @@ public class EvenIndex {
     }
 
     public static void main(String[] args) {
-        // int[] ints = IntStream.generate(()->{return (int)(Math.random()*1000);}).limit(1000).toArray();
-        int[] ints = new Random().ints(1000, 10000).toArray();
+        int[] ints = IntStream.generate(() -> {
+            return (int) (Math.random() * 1000);
+        }).limit(1000).toArray();
         System.out.println(findEvenIndex1(ints));
         System.out.println(findEvenIndex2(ints));
     }
