@@ -4,5 +4,6 @@
 out
 gen
 
-# Private classes
+# Private files
 CaesarCipher.java
+NQueen.java
