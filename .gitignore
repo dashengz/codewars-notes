@@ -7,3 +7,4 @@ gen
 # Private files
 CaesarCipher.java
 NQueen.java
+SumFctStream.java
