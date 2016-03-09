@@ -8,3 +8,5 @@ gen
 CaesarCipher.java
 NQueen.java
 SumFctStream.java
+SumOfK.java
+Decompose.java
