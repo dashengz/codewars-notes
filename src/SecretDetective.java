@@ -53,7 +53,7 @@ public class SecretDetective {
                 } else letters.add(letters.remove(i));
             }
         }
-        return result.stream().map(String::valueOf).collect(Collectors.joining()).trim();
+        return result.stream().map(String::valueOf).collect(Collectors.joining()).substring(1);
     }
 
     public static void main(String[] args) {
