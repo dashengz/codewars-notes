@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 public class LoopInspector {
     /**
      * Given a node that is the beginning of a linked list
@@ -44,5 +46,14 @@ public class LoopInspector {
             runner = runner.getNext();
         }
         return size;
+    }
+
+    /**
+     * placeholder class
+     */
+    private class Node {
+        public Node getNext() {
+            return new Node();
+        }
     }
 }
