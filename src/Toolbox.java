@@ -39,8 +39,30 @@ public class Toolbox {
         return result;
     }
 
+    /**
+     * Sort a string of multiple numbers based on their digit-sums.
+     * If two numbers have the same sum, sort them as strings.
+     *
+     * @param strng the string with unsorted numbers
+     * @return the sorted string
+     */
+    public static String orderWeight(String strng) {
+        String weights[] = strng.split(" ");
+        Arrays.sort(weights, (o1, o2) -> {
+            int s1 = o1.chars().map(k -> k - '0').sum();
+            int s2 = o2.chars().map(k -> k - '0').sum();
+            return s1 != s2 ? s1 - s2 : o1.compareTo(o2);
+        });
+        return String.join(" ", (CharSequence[]) weights);
+    }
+
     public static void main(String[] args) {
+        // Test for order()
         System.out.println(order("a3 Th1is tes4t is2"));
+        // Test for tribonacci()
         System.out.println(Arrays.toString(tribonacci(new double[]{1, 1, 1}, 10)));
+        // Test for orderWeight()
+        System.out.println(orderWeight("103 123 4444 99 2000")); // 2000 103 123 4444 99
+        System.out.println(orderWeight("2000 10003 1234000 44444444 9999 11 11 22 123")); // 11 11 2000 10003 22 123 1234000 44444444 9999
     }
 }
